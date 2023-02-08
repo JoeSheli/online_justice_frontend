@@ -3,6 +3,7 @@ import { ReactComponent as Scams } from "../assets/scams.svg";
 import { ReactComponent as Lottery } from "../assets/lottery.svg";
 import PowerCoursels from "../subcomponents/PowerCoursels";
 import { Button } from "@mui/material";
+import { Link } from "react-router-dom";
 
 function OnlineJustice() {
   const experts = [
@@ -47,16 +48,18 @@ function OnlineJustice() {
           />
         ))}
       </div>
-      <Button
-        style={{
-          textTransform: "capitalize",
-          color: "#DB1D60",
-          border: "1px solid #DB1D60",
-          padding: "15px 15px",
-        }}
-      >
-        Contact an expert
-      </Button>
+      <Link to="/form">
+        <Button
+          style={{
+            textTransform: "capitalize",
+            color: "#DB1D60",
+            border: "1px solid #DB1D60",
+            padding: "15px 15px",
+          }}
+        >
+          Contact an expert
+        </Button>
+      </Link>
     </div>
   );
 }

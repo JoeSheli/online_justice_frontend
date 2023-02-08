@@ -7,7 +7,7 @@ function Navigation() {
   return (
     <div className="bg-white flex items-center justify-between py-5">
       <div className="flex gap-12 items-center">
-        <Link to="/"> 
+        <Link to="/">
           <img src={Logo} />
         </Link>
         {navs.map((nav, index) => (
@@ -22,27 +22,31 @@ function Navigation() {
         ))}
       </div>
       <div className="flex items-center gap-5">
-        <Button
-          variant="outlined"
-          style={{
-            textTransform: "capitalize",
-            color: "#DB1D60",
-            border: "1px solid #DB1D60",
-            padding: "10px 70px",
-          }}
-        >
-          Call us
-        </Button>
-        <Button
-          variant="contained"
-          style={{
-            background: "#DB1D60",
-            padding: "10px 70px",
-            textTransform: "capitalize",
-          }}
-        >
-          Report
-        </Button>
+        <Link to="/form">
+          <Button
+            variant="outlined"
+            style={{
+              textTransform: "capitalize",
+              color: "#DB1D60",
+              border: "1px solid #DB1D60",
+              padding: "10px 70px",
+            }}
+          >
+            Call us
+          </Button>
+        </Link>
+        <Link to="/form">
+          <Button
+            variant="contained"
+            style={{
+              background: "#DB1D60",
+              padding: "10px 70px",
+              textTransform: "capitalize",
+            }}
+          >
+            Report
+          </Button>
+        </Link>
       </div>
     </div>
   );

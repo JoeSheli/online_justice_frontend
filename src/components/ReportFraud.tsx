@@ -1,5 +1,6 @@
 import { East } from "@mui/icons-material";
 import { Button } from "@mui/material";
+import { Link } from "react-router-dom";
 import { ReactComponent as Person } from "../assets/person.svg";
 
 function ReportFraud() {
@@ -14,18 +15,20 @@ function ReportFraud() {
           Protect your community by reporting fraud, scams, and bad business
           practices.
         </div>
-        <Button
-          variant="contained"
-          style={{
-            background: "#DB1D60",
-            padding: "10px 40px",
-            textTransform: "capitalize",
-          }}
-          className="flex items-center gap-4"
-        >
-          <span>Report Now</span>
-          <East />
-        </Button>
+        <Link to="/form">
+          <Button
+            variant="contained"
+            style={{
+              background: "#DB1D60",
+              padding: "10px 40px",
+              textTransform: "capitalize",
+            }}
+            className="flex items-center gap-4"
+          >
+            <span>Report Now</span>
+            <East />
+          </Button>
+        </Link>
       </div>
       <Person />
     </div>
