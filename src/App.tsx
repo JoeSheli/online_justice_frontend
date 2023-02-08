@@ -1,3 +1,4 @@
+import CyberDefense from "./components/CyberDefense";
 import HowItWorks from "./components/HowItWorks";
 import Navigation from "./components/Navigation";
 import OnlineJustice from "./components/OnlineJustice";
@@ -10,6 +11,7 @@ function App() {
       <ReportFraud />
       <HowItWorks />
       <OnlineJustice />
+      <CyberDefense />
     </div>
   );
 }

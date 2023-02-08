@@ -8,7 +8,12 @@ function Navigation() {
       <div className="flex gap-10 items-center">
         <img src={Logo} />
         {navs.map((nav, index) => (
-          <div key={index} className={`hover:text-[#DB1D60] cursor-pointer ${index === 0 && "text-[#DB1D60]"}`}>
+          <div
+            key={index}
+            className={`hover:text-[#DB1D60] cursor-pointer ${
+              index === 0 && "text-[#DB1D60] font-medium"
+            }`}
+          >
             {nav}
           </div>
         ))}
@@ -16,7 +21,12 @@ function Navigation() {
       <div className="flex items-center gap-5">
         <Button
           variant="outlined"
-          style={{ textTransform: "capitalize", color: "#DB1D60", border: "1px solid #DB1D60", padding: "10px 80px" }}
+          style={{
+            textTransform: "capitalize",
+            color: "#DB1D60",
+            border: "1px solid #DB1D60",
+            padding: "10px 80px",
+          }}
         >
           Call us
         </Button>
