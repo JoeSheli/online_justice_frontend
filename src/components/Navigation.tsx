@@ -1,6 +1,6 @@
 import { Button } from "@mui/material";
 import React from "react";
-import Logo from "../assets/logo.png";
+import Logo from "../assets/topLogo.png";
 import { Link } from "react-router-dom";
 function Navigation() {
   const navs = ["Home", "About us", "FAQ", "Resources"];
