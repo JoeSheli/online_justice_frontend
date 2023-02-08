@@ -1,17 +1,20 @@
 import { Button } from "@mui/material";
 import React from "react";
 import Logo from "../assets/logo.png";
+import { Link } from "react-router-dom";
 function Navigation() {
   const navs = ["Home", "About us", "FAQ", "Resources"];
   return (
     <div className="bg-white flex items-center justify-between py-5">
-      <div className="flex gap-10 items-center">
-        <img src={Logo} />
+      <div className="flex gap-12 items-center">
+        <Link to="/"> 
+          <img src={Logo} />
+        </Link>
         {navs.map((nav, index) => (
           <div
             key={index}
             className={`hover:text-[#DB1D60] cursor-pointer ${
-              index === 0 && "text-[#DB1D60] font-medium"
+              index === 0 && "text-[#DB1D60] text-sm font-medium"
             }`}
           >
             {nav}
@@ -25,7 +28,7 @@ function Navigation() {
             textTransform: "capitalize",
             color: "#DB1D60",
             border: "1px solid #DB1D60",
-            padding: "10px 80px",
+            padding: "10px 70px",
           }}
         >
           Call us
@@ -34,7 +37,7 @@ function Navigation() {
           variant="contained"
           style={{
             background: "#DB1D60",
-            padding: "10px 80px",
+            padding: "10px 70px",
             textTransform: "capitalize",
           }}
         >
