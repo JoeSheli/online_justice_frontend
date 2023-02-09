@@ -15,7 +15,7 @@ function Step({
   key: number;
 }) {
   return (
-    <div key={key} className="flex items-center gap-5">
+    <div key={key} className="flex min-w-[15rem] items-center gap-5">
       <div className="flex items-start flex-col gap-4">
         <div
           className="py-3 px-5 rounded-md"

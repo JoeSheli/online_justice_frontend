@@ -38,7 +38,7 @@ function OnlineJustice() {
         will investigate your particular case and look into recovering a
         substantial part if not all of your lost funds.
       </div>
-      <div className="flex w-full gap-5">
+      <div className="flex overflow-x-auto w-full gap-5">
         {experts.map((expert, index) => (
           <PowerCoursels
             key={index}

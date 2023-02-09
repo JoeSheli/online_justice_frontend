@@ -7,32 +7,38 @@ import { ReactComponent as AP } from "../assets/Card.svg";
 import { ReactComponent as Digital } from "../assets/digital.svg";
 function Contact() {
   return (
-    <div className="flex justify-between pr-32 items-center">
-      <div className="relative">
+    <div className="flex md:flex-row flex-col-reverse  gap-20  justify-between lg:pr-32 items-center">
+      <div className="relative  w-full sm:w-[35rem] h-full sm:h-[35rem]">
         <Brands />
-        <a href="https://www.yahoo.com/" className="absolute top-10 left-0">
-          <Yahoo />
+        <a
+          href="https://www.yahoo.com/"
+          className="absolute  top-0 sm:top-10 left-0"
+        >
+          <Yahoo className="sm:w-auto w-[10rem]" />
         </a>
         <a
           href="https://www.marketwatch.com/"
-          className="absolute top-10 right-0"
+          className="absolute top-0 sm:top-10 right-0"
         >
-          <MarketWatch />
+          <MarketWatch className="sm:w-auto w-[10rem]" />
         </a>
-        <a href="https://apnews.com/" className="absolute bottom-32 left-0">
-          <AP />
+        <a
+          href="https://apnews.com/"
+          className="absolute sm:bottom-32 bottom-16 left-0"
+        >
+          <AP className="sm:w-auto w-[10rem]" />
         </a>
         <a
           href="https://www.digitaljournal.com/"
-          className="absolute bottom-32 right-0"
+          className="absolute sm:bottom-32 bottom-12 right-0"
         >
-          <Digital />
+          <Digital className="sm:w-auto  w-[10rem]" />
         </a>
         <a
           href="https://www.benzinga.com/"
           className="absolute top-[35%] left-[30%]"
         >
-          <Benzinga />
+          <Benzinga className="sm:w-auto w-[10rem]" />
         </a>
       </div>
       <div className="text-4xl font-bold">As seen on</div>

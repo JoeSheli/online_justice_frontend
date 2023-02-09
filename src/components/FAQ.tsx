@@ -16,9 +16,25 @@ function FAQ() {
       title: "How do I know Online Justice is not a scam?",
       desc: "Report anything you think may be a fraud, scam, or bad business practice",
     },
+    {
+      title: "Are you legal professionals?",
+      desc: "Report anything you think may be a fraud, scam, or bad business practice",
+    },
+    {
+      title: "Does it matter where I am based?",
+      desc: "Report anything you think may be a fraud, scam, or bad business practice",
+    },
+    {
+      title: "How do you proceed to recover lost funds?",
+      desc: "Report anything you think may be a fraud, scam, or bad business practice",
+    },
+    {
+      title: "What type of scam can you help me with?",
+      desc: "Report anything you think may be a fraud, scam, or bad business practice",
+    },
   ];
   return (
-    <div className="bg-[#232323] mb-10 px-5 py-16 rounded-lg text-white">
+    <div className="bg-[#232323] my-10 px-5 py-16 rounded-lg text-white">
       <div className="text-center font-bold text-2xl">FAQ</div>
       <div className="flex flex-col gap-5 mt-5">
         {qns.map((qn, index) => (
@@ -31,7 +47,9 @@ function FAQ() {
                   : [...selectedQns, index]
               );
             }}
-            style={{ height: selectedQns.includes(index) ? qn.desc.length + 30 : 64 }}
+            style={{
+              height: selectedQns.includes(index) ? qn.desc.length + 30 : 64,
+            }}
             className={`${
               selectedQns.includes(index) && "border"
             }  overflow-y-hidden flex flex-col gap-4  border-[#464646] duration-500 transition-all rounded-md p-5`}

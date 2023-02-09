@@ -33,7 +33,7 @@ function Footer() {
   ];
   return (
     <div className="bg-[#232323] text-white">
-      <div className="max-w-[90rem] px-14 py-10 flex gap-10 mx-auto">
+      <div className="max-w-[90rem] px-14 py-10 flex md:flex-row flex-col gap-10 mx-auto">
         <div className="flex border-r-2 border-[#383838] pr-10 py-6 max-w-[23rem] gap-5 flex-col">
           <Link to="/">
             <img src={Logo} />
@@ -43,7 +43,7 @@ function Footer() {
             those who have fallen victim to scams perpetrated by online
             criminals.
           </div>
-          <div className="flex items-center gap-5">
+          <div className="flex flex-wrap items-center gap-5">
             <div className="cursor-pointer border-2 rounded-md p-3 border-[#383838]">
               <LinkedIn />
             </div>
@@ -58,7 +58,7 @@ function Footer() {
         <div className="flex flex-col gap-16">
           <div className="flex flex-col gap-10">
             <div className="text-2xl font-semibold">Menu</div>
-            <div className="flex items-center gap-6 font-medium">
+            <div className="flex flex-wrap items-center gap-6 font-medium">
               {foooters.map((foter, index) => (
                 <div key={index}>{foter}</div>
               ))}
@@ -66,7 +66,7 @@ function Footer() {
           </div>
           <div className="flex flex-col gap-10">
             <div className="text-2xl font-semibold">Contact info</div>
-            <div className="flex items-center gap-5 font-medium">
+            <div className="flex flex-wrap items-center gap-5 font-medium">
               {others.map((foter, index) => (
                 <div key={index}>{foter}</div>
               ))}
