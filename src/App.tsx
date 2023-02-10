@@ -10,8 +10,8 @@ import ReportFraud from "./components/ReportFraud";
 function App() {
   return (
     <>
+      <Navigation />
       <div className="md:px-14 px-5 min-h-screen max-w-[90rem] mx-auto">
-        <Navigation />
         <ReportFraud />
         <HowItWorks />
         <OnlineJustice />

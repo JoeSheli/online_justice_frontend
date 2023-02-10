@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useRecoilState, useRecoilValue } from "recoil";
 import Logo from "./assets/topLogo.png";
-import { Step2Values, validation } from "./atom";
+import { finalValues, Step2Values, validation } from "./atom";
 import Step1 from "./components/Step1";
 import Step2 from "./components/Step2";
 import Step3 from "./components/Step3";
@@ -38,6 +38,7 @@ function Form() {
     }
   }, [error]);
   const [step2Values, setStep2values] = useRecoilState(Step2Values);
+  const [values, setValues] = useRecoilState(finalValues);
   return (
     <div className="max-w-[90rem] mx-auto px-6 md:px-14">
       <ValidationGroup>
@@ -66,7 +67,11 @@ function Form() {
           </div>
           {error.length > 0 && (
             <Shake spy={spier}>
-              <Alert severity="error">{error.map((f) => f)}</Alert>
+              <Alert severity="error" className="gap-2">
+                {error.map((error) => (
+                  <div>{error}</div>
+                ))}
+              </Alert>
             </Shake>
           )}
           <div className="flex flex-col items-end gap-4 rounded-xl border p-5">
@@ -110,11 +115,12 @@ function Form() {
                     setCurrentStep(currentStep + 1);
                   } else if (currentStep === 2) {
                     // check if one of  step2values has helperText
+                    let errors = [];
                     if (
                       step2Values?.date?.helperText ||
                       !step2Values?.date?.value
                     ) {
-                      error.push("Enter date you gave your money ");
+                      errors.push("Enter date you gave your money ");
                       setStep2values({
                         ...step2Values,
                         date: {
@@ -124,7 +130,7 @@ function Form() {
                       });
                     }
                     if (step2Values.heardScam.value.length === 0) {
-                      error.push("Enter how you heard about the scam");
+                      errors.push("Enter how you heard about the scam ");
                       setStep2values({
                         ...step2Values,
                         heardScam: {
@@ -133,12 +139,25 @@ function Form() {
                         },
                       });
                     }
-                    setSecondsPassed(0)
-                    setError(error)
+                    if (!errors.length) {
+                      setCurrentStep(currentStep + 1);
+                    }
+                    setError([...errors]);
                     // check if date has value and check if
-                  }
-                  if (error.length === 0) {
-                    setCurrentStep(currentStep + 1)
+                  } else {
+                    let errors = [];
+                    if (values?.firstname.value.length === 0) {
+                      errors.push("Enter your firstname");
+                    }
+                    if (values?.lastname.value.length === 0) {
+                      errors.push("Enter your lastname");
+                    }
+                    setSecondsPassed(0);
+                    if (errors.length > 0) {
+                      setError([...errors]);
+                    } else {
+                      navigate("/thankyou")
+                    }
                   }
                 }}
               >

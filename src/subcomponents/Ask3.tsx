@@ -96,7 +96,6 @@ function Ask3({
       {question ? <div className="font-medium">{question}</div> : <div></div>}
       {type === "simple" ? (
         <ReusedTextField
-          // helperText={valueRef}
           onChange={(e) => {
             if (number) {
               if (!/^[0-9\b]+$/.test(e.target.value)) {
@@ -104,6 +103,8 @@ function Ask3({
               } else {
                 setValue!(e.target.value);
               }
+            } else {
+              setValue!(e.target.value)
             }
           }}
           error={valueRef !== undefined || valueRef !== null}

@@ -18,10 +18,10 @@ function Footer() {
     "Privacy  Policy",
   ];
   const others = [
-    <div className="flex items-center gap-3">
+    <a target="_blank" className="flex items-center gap-3">
       <Phone />
       <span>+98 939 269 6115</span>
-    </div>,
+    </a>,
     <div className="flex items-center gap-3">
       <Mail />
       <span>Info@email.com</span>
@@ -44,15 +44,27 @@ function Footer() {
             criminals.
           </div>
           <div className="flex flex-wrap items-center gap-5">
-            <div className="cursor-pointer border-2 rounded-md p-3 border-[#383838]">
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/company/online-justice/"
+              className="cursor-pointer border-2 rounded-md p-3 border-[#383838]"
+            >
               <LinkedIn />
-            </div>
-            <div className="cursor-pointer border-2 rounded-md p-3 border-[#383838]">
+            </a>
+            <a
+              target="_blank"
+              href="https://www.instagram.com/onlinejustice4u"
+              className="cursor-pointer border-2 rounded-md p-3 border-[#383838]"
+            >
               <Instagram />
-            </div>
-            <div className="cursor-pointer border-2 rounded-md p-3 border-[#383838]">
+            </a>
+            <a
+              target="_blank"
+              href="https://www.facebook.com/OnlineJustice4u"
+              className="cursor-pointer border-2 rounded-md p-3 border-[#383838]"
+            >
               <Facebook />
-            </div>
+            </a>
           </div>
         </div>
         <div className="flex flex-col gap-16">
@@ -60,7 +72,20 @@ function Footer() {
             <div className="text-2xl font-semibold">Menu</div>
             <div className="flex flex-wrap items-center gap-6 font-medium">
               {foooters.map((foter, index) => (
-                <div key={index}>{foter}</div>
+                <a
+                  href={
+                    index === 3
+                      ? "https://onlinejustice.com/blog/"
+                      : index === 4
+                      ? "https://onlinejustice.com/terms-conditions/"
+                      : index === 5
+                      ? "https://onlinejustice.com/privacy-policy-2/"
+                      : `#${foter.toLowerCase().split(" ").join("")}`
+                  }
+                  key={index}
+                >
+                  {foter}
+                </a>
               ))}
             </div>
           </div>

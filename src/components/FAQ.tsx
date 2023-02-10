@@ -46,7 +46,7 @@ function FAQ() {
     },
   ];
   return (
-    <div className="bg-[#232323] my-10 px-5 py-16 rounded-lg text-white">
+    <div id="faq" className="bg-[#232323] my-10 px-5 py-16 rounded-lg text-white">
       <div className="text-center font-bold text-2xl">FAQ</div>
       <div className="flex flex-col gap-5 mt-5">
         {qns.map((qn, index) => (

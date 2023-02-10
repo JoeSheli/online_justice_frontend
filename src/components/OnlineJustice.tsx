@@ -27,6 +27,26 @@ function OnlineJustice() {
       title: "e-commerce scams",
       desc: "We can provide help and guidance for victims of crypto scams, Forex scams, binary options scams and more",
     },
+    {
+      icon: <Lottery />,
+      title: "Loan scams",
+      desc: "We can provide help and guidance for victims of crypto scams, Forex scams, binary options scams and more",
+    },
+    {
+      icon: <Lottery />,
+      title: "Employment scams",
+      desc: "We can provide help and guidance for victims of crypto scams, Forex scams, binary options scams and more",
+    },
+    {
+      icon: <Lottery />,
+      title: "Tax Refund scams",
+      desc: "We can provide help and guidance for victims of crypto scams, Forex scams, binary options scams and more",
+    },
+    {
+      icon: <Lottery />,
+      title: "Inheritance scams",
+      desc: "We can provide help and guidance for victims of crypto scams, Forex scams, binary options scams and more",
+    },
   ];
 
   return (
@@ -38,7 +58,7 @@ function OnlineJustice() {
         will investigate your particular case and look into recovering a
         substantial part if not all of your lost funds.
       </div>
-      <div className="flex overflow-x-auto w-full gap-5">
+      <div className="flex overflow-x-auto pb-4 w-full gap-5">
         {experts.map((expert, index) => (
           <PowerCoursels
             key={index}

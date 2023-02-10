@@ -6,7 +6,7 @@ function HowItWorks() {
     {
       step: 1,
       title: "Tell what happened",
-      desc: "Find out what you can do to protect yourself. You can sollicit free consulting from our cybersecurity experts.",
+      desc: "Report a scam, a company, or an unwanted call.",
     },
     {
       step: 2,
@@ -16,7 +16,7 @@ function HowItWorks() {
     {
       step: 3,
       title: "Help stop fraud",
-      desc: "Find out what you can do to protect yourself. You can sollicit free consulting from our cybersecurity experts.",
+      desc: "We use and share reports with our law enforcement partners to help with investigations.",
     },
   ];
 

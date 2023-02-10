@@ -5,9 +5,9 @@ import { ReactComponent as Person } from "../assets/person.svg";
 
 function ReportFraud() {
   return (
-    <div className="flex md:flex-row flex-col-reverse pt-20 justify-between w-full items-center">
+    <div id="home" className="flex md:flex-row flex-col-reverse pt-20 justify-between w-full items-center">
       <div className="flex  gap-5 flex-col items-start max-w-[28rem]">
-        <div className="font-[800] text-5xl flex flex-col gap-5">
+        <div className="font-[800] text-4xl sm:text-5xl flex flex-col gap-3 sm:gap-5">
           <div>Report to help </div>
           <div className="text-[#DB1D60]">Fight Fraud!</div>
         </div>
@@ -30,7 +30,7 @@ function ReportFraud() {
           </Button>
         </Link>
       </div>
-      <Person className="md:w-auto w-[25rem]" />
+      <Person className="w-full max-w-[28rem]" />
     </div>
   );
 }

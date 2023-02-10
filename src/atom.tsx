@@ -21,6 +21,6 @@ export const finalValues: RecoilState<any> = atom({
   key: "finalValues",
   default: {
     firstname: { value: "", helperText: "" },
-    lastame: { value: "", helperText: "" },
+    lastname: { value: "", helperText: "" },
   },
 });
