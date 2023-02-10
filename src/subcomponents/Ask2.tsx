@@ -4,11 +4,10 @@ import React from "react";
 function Ask2({ question }: { question: string }) {
   const labels = ["Yes", "No"];
   return (
-    <div className="flex flex-col gap-4">
+    <RadioGroup className="flex flex-col gap-4">
       <div>{question}</div>
       <div className="flex items-center">
-        <div
-        >
+        <div>
           {labels.map((label, index) => (
             <FormControlLabel
               value={label}
@@ -19,7 +18,7 @@ function Ask2({ question }: { question: string }) {
           ))}
         </div>
       </div>
-    </div>
+    </RadioGroup>
   );
 }
 

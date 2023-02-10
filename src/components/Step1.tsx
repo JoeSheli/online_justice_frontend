@@ -1,6 +1,8 @@
 import { KeyboardArrowDown } from "@mui/icons-material";
 import { Radio, RadioGroup } from "@mui/material";
 import React, { useState } from "react";
+import { useRecoilState, useRecoilValue } from "recoil";
+import { validation } from "../atom";
 
 function Step1() {
   const data = [
@@ -45,7 +47,7 @@ function Step1() {
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     },
   ];
-const [selectedValue, setSelectedValue] = useState<any>()
+const [selectedValue, setSelectedValue] = useRecoilState(validation)
   return (
     <div className="flex w-full flex-col gap-5">
       <div className="border-b flex flex-col gap-5 py-5 w-full">

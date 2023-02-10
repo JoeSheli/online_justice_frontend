@@ -1,5 +1,7 @@
 import {
   FormControl,
+  FormHelperText,
+  InputAdornment,
   InputBase,
   InputLabel,
   MenuItem,
@@ -9,9 +11,11 @@ import {
   TextField,
   type TextFieldProps,
 } from "@mui/material";
-import React, { useState } from "react";
+import { useState } from "react";
 import { DesktopDatePicker, LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { useRecoilState } from "recoil";
+import { Step2Values } from "../atom";
 
 const BootstrapInput = styled(InputBase)(({ theme }) => ({
   "& .MuiFilledInput-root": {
@@ -68,20 +72,48 @@ export const ReusedTextField = styled((props: TextFieldProps) => (
 function Ask3({
   question,
   type,
+  number,
   placeholder,
   data,
+  value,
+  setValue,
+  helperText: valueRef,
+  setHelperText,
 }: {
   question?: string;
   type: string;
   placeholder?: string;
-  data?: string[];
+  data?: any[];
+  number?: boolean;
+  value?: string;
+  setValue?: React.Dispatch<React.SetStateAction<string>>;
+  helperText?: any;
+  setHelperText?: any;
 }) {
-  const [date, setDate] = useState<any>(null);
+  const [values, setValues] = useRecoilState(Step2Values);
   return (
     <div className="flex gap-3 justify-end   w-full flex-col">
-     {question && <div className="font-medium">{question}</div>}
+      {question ? <div className="font-medium">{question}</div> : <div></div>}
       {type === "simple" ? (
-        <ReusedTextField label={placeholder} variant="filled" />
+        <ReusedTextField
+          // helperText={valueRef}
+          onChange={(e) => {
+            if (number) {
+              if (!/^[0-9\b]+$/.test(e.target.value)) {
+                setValue!("");
+              } else {
+                setValue!(e.target.value);
+              }
+            }
+          }}
+          error={valueRef !== undefined || valueRef !== null}
+          helperText={valueRef}
+          label={placeholder}
+          variant="filled"
+          id="outlined-required"
+          className="w-full"
+          value={value}
+        />
       ) : type === "select" ? (
         <FormControl variant="standard">
           <InputLabel id="demo-customized-select-label">Select</InputLabel>
@@ -91,19 +123,27 @@ function Ask3({
             input={<BootstrapInput />}
             placeholder="Select"
             label="Select"
+            onChange={(e) => {
+              setValue!(e.target.value as string);
+            }}
           >
-            <MenuItem value={10}>Value 1</MenuItem>
-            <MenuItem value={20}>Value 2</MenuItem>
-            <MenuItem value={30}>Value 3</MenuItem>
+            {data?.map((data, index) => (
+              <MenuItem key={index} value={data.value}>
+                {data.label}
+              </MenuItem>
+            ))}
           </Select>
+          <FormHelperText>{valueRef}</FormHelperText>
         </FormControl>
       ) : (
         <LocalizationProvider dateAdapter={AdapterDayjs}>
           <DesktopDatePicker
-            label="MM / DD / YYYY"
-            inputFormat="MM/DD/YYYY"
-            value={date}
-            onChange={(e) => setDate(e)}
+            label="DD / MM / YYYY"
+            inputFormat="DD/MM/YYYY"
+            value={values.date.value}
+            onChange={(e) => {
+              setValues({ ...values, date: { value: e, helperText: "" } });
+            }}
             renderInput={(params) => (
               <TextField placeholder="MM / DD / YYYY" {...params} />
             )}

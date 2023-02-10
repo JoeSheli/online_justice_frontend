@@ -1,8 +1,11 @@
 import React from "react";
+import { useRecoilState, useRecoilValue } from "recoil";
+import { finalValues } from "../atom";
 import Ask2 from "../subcomponents/Ask2";
 import Ask3 from "../subcomponents/Ask3";
 
 function Step3() {
+  const [values, setValues] = useRecoilState(finalValues)
   return (
     <div className="flex w-full flex-col gap-8">
       <div className="border-b flex flex-col gap-5 py-5 w-full">

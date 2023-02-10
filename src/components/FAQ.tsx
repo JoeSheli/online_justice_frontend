@@ -6,31 +6,43 @@ function FAQ() {
   const qns = [
     {
       title: "What can I report?",
-      desc: "Report anything you think may be a fraud, scam, or bad business practice",
+      desc: "Report anything you think may be a fraud, scam, or bad business practice.",
     },
     {
       title: "How long does an average case take to complete?",
-      desc: "Report anything you think may be a fraud, scam, or bad business practice",
-    },
-    {
-      title: "How do I know Online Justice is not a scam?",
-      desc: "Report anything you think may be a fraud, scam, or bad business practice",
-    },
-    {
-      title: "Are you legal professionals?",
-      desc: "Report anything you think may be a fraud, scam, or bad business practice",
-    },
-    {
-      title: "Does it matter where I am based?",
-      desc: "Report anything you think may be a fraud, scam, or bad business practice",
+      desc: "Although our experienced team will look to complete your case as soon as possible, each case is unique. On average this process takes from two weeks to two months.",
     },
     {
       title: "How do you proceed to recover lost funds?",
-      desc: "Report anything you think may be a fraud, scam, or bad business practice",
+      desc: "We are able to gather a great deal of information on the scammer by utilizing tools we have developed, as well as our own experience in dealing with scammers and our extensive database of fraud criminals. Our use of these tools allows us to leverage information that will get the scammer to settle and pay back the money they took, in order for his identity to not be reported to his national law enforcers.",
     },
     {
-      title: "What type of scam can you help me with?",
-      desc: "Report anything you think may be a fraud, scam, or bad business practice",
+      title: "What is the cost fof pursuing a case via OnlineJustice?",
+      desc: "The total cost of the services is comprised of two parts: First, we charge a fixed-fee of 299$ at the beginning of the engagement for services rendered in the relevant engagement with each customer. Second, depending on the complexity of your case and the tools we need, our experts will provide you with an exact quotation, where the initial 299$ deposit is substracted from the final fee. No other hidden fees will be added at any time.",
+    },
+    {
+      title: "Why don't you charge me at the end of the process only?",
+      desc: "Each case requires a significant amount of man-hours to investigate, process, and bring to successful completion. We charge a fixed-fee to cover the general legal services rendered and operational costs that we incur, hence the need to do so ahead of any action we undertake on your behalf.",
+    },
+    {
+      title: "Where is OnlineJustice based?",
+      desc: "OnlineJustice is owned and operated by Orange INF Tools LTD registered under #14186929 and located at 167-169 Great Portland Street, 5th Floor, London W1W 5PF.",
+    },
+    {
+      title: "How do I know Online Justice is not a scam?",
+      desc: "We invite you to check out the hundreds of great reviews by our clients to verify that we are a legitimate and reputable organization. As well as this, our dedicated team will happily forward you the relevant credentials and organize with you a video call with them upon request.",
+    },
+    {
+      title: "Are you legal professionals?",
+      desc: "The services are provided by and/or under the supervision of licensed attorneys. Mainly, we work with a team of legal professionals who provide recovery consulting services and practical assistance in the pursuit of recouping your stolen funds.",
+    },
+    {
+      title: "Will your actions lead to the taking of scammers to court?",
+      desc: "No, our services do not include court representation. But, our methods of recovering your lost money involve Alternative Dispute Resolution outside of court in order to speed up things. So we deal with the banks and relevant agencies that made the relevant transaction. We found this is a far more effective means of securing the recovery of the funds.",
+    },
+    {
+      title: "Does it matter where I am based?",
+      desc: "It doesn't matter where you are based, our team can help you get your money back. So if you have the relevant documentation needed, we can help you regardless of your location.",
     },
   ];
   return (
@@ -48,7 +60,11 @@ function FAQ() {
               );
             }}
             style={{
-              height: selectedQns.includes(index) ? qn.desc.length + 30 : 64,
+              height: selectedQns.includes(index)
+                ? (qn.desc.length / 172 < 1
+                    ? 1
+                    : Math.floor(qn.desc.length / 172) + 30) + 120
+                : 64,
             }}
             className={`${
               selectedQns.includes(index) && "border"
