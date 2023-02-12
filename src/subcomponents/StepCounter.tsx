@@ -6,7 +6,11 @@ function StepCounter({ step }: { step: number }) {
     <div className="flex gap-5 w-full">
       {steps.map((stepdescription, i) => (
         <div className="flex flex-col gap-3 w-full">
-         {  i < step  ? <div className="font-semibold">{stepdescription}</div> : <div className="h-[1.47rem]"></div>}
+          {i < step ? (
+            <div className="font-semibold">{stepdescription}</div>
+          ) : (
+            <div className="h-[1.47rem]"></div>
+          )}
           <div
             key={i}
             className={`w-full h-3 rounded-full ${

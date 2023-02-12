@@ -11,20 +11,23 @@ function Navigation() {
   const handleClick = (event: any) => {
     setAnchorEl(event.currentTarget);
   };
-  useEffect(() => {
-    window.scroll(0, 0);
-  }, []);
+
   const handleClose = () => {
     setAnchorEl(null);
   };
-  const navigate = useNavigate();
+  const link = window.location.href.split("#")[1];
+  useEffect(() => {
+    let f = navs.findIndex((v) => v.toLowerCase().split(" ").join("") === link);
+    setSelected(f === -1 ? 0 : f);
+  }, []);
   const navs = ["Home", "About us", "FAQ", "Resources"];
+  const [selected, setSelected] = useState(0);
   return (
     <div className="bg-white z-50 sticky top-0  min-w-screen">
       <div className="bg-white  max-w-[90rem] mx-auto p-2 sm:px-14 flex items-center justify-between py-5">
         <div className="flex gap-12 items-center">
           <Link to="/">
-            <img src={Logo} className="sm:w-auto w-[12rem]"/>
+            <img src={Logo} className="sm:w-auto w-[12rem]" />
           </Link>
           <div className="lg:flex hidden items-center gap-10 lg">
             {navs.map((nav, index) => (
@@ -35,8 +38,14 @@ function Navigation() {
                     : `#${nav.toLowerCase().split(" ").join("")}`
                 }
                 key={index}
+                onClick={() => {
+                  if (index !== 3) {
+                    setSelected(index);
+                  }
+                }}
+                target={index === 3 ? "_blank" : "_top"}
                 className={`hover:text-[#DB1D60] cursor-pointer ${
-                  index === 0 && "text-[#DB1D60] text-sm font-medium"
+                  index === selected && "text-[#DB1D60]  font-medium"
                 }`}
               >
                 {nav}
@@ -59,19 +68,35 @@ function Navigation() {
             }}
             className="p-5"
           >
-            {[...navs, "Call Us", "Report"].map((nav, index) => (
-              <div
-                key={index}
-                onClick={() => {
-                  if (index === 5 || index === 4) {
-                    navigate("/form");
+            {[...navs, "Call Us", "Report"].map((nav, index) =>
+              index === 5 ? (
+                <Link
+                  to="/form"
+                  className="px-2 py-1 min-w-[10rem] font-medium block cursor-pointer hover:text-white hover:bg-[#DB1D60]"
+                >
+                  {nav}
+                </Link>
+              ) : (
+                <a
+                  key={index}
+                  onClick={() => {
+                    if (index !== 3 && index !== 4 && index !== 5) {
+                      setSelected(index);
+                    }
+                  }}
+                  href={
+                    index === 3
+                      ? "https://onlinejustice.com/blog/"
+                      : index === 4
+                      ? "tel:+442045253282"
+                      : `#${nav.toLowerCase().split(" ").join("")}`
                   }
-                }}
-                className="px-2 py-1 min-w-[10rem] font-medium cursor-pointer hover:text-white hover:bg-[#DB1D60]"
-              >
-                {nav}
-              </div>
-            ))}
+                  className="px-2 py-1 min-w-[10rem] font-medium block cursor-pointer hover:text-white hover:bg-[#DB1D60]"
+                >
+                  {nav}
+                </a>
+              )
+            )}
           </Popover>
         </div>
         <div className="lg:flex hidden items-center gap-5">

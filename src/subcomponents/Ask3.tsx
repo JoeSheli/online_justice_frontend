@@ -104,7 +104,7 @@ function Ask3({
                 setValue!(e.target.value);
               }
             } else {
-              setValue!(e.target.value)
+              setValue!(e.target.value);
             }
           }}
           error={valueRef !== undefined || valueRef !== null}

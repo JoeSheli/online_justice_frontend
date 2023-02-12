@@ -1,8 +1,8 @@
 import { KeyboardArrowDown, KeyboardArrowUp } from "@mui/icons-material";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 function FAQ() {
-  const [selectedQns, setSelectedQns] = useState<number[]>([]);
+  const [selectedQn, setSelectedQn] = useState<number | null>(null);
   const qns = [
     {
       title: "What can I report?",
@@ -17,7 +17,7 @@ function FAQ() {
       desc: "We are able to gather a great deal of information on the scammer by utilizing tools we have developed, as well as our own experience in dealing with scammers and our extensive database of fraud criminals. Our use of these tools allows us to leverage information that will get the scammer to settle and pay back the money they took, in order for his identity to not be reported to his national law enforcers.",
     },
     {
-      title: "What is the cost fof pursuing a case via OnlineJustice?",
+      title: "What is the cost of pursuing a case via OnlineJustice?",
       desc: "The total cost of the services is comprised of two parts: First, we charge a fixed-fee of 299$ at the beginning of the engagement for services rendered in the relevant engagement with each customer. Second, depending on the complexity of your case and the tools we need, our experts will provide you with an exact quotation, where the initial 299$ deposit is substracted from the final fee. No other hidden fees will be added at any time.",
     },
     {
@@ -46,41 +46,39 @@ function FAQ() {
     },
   ];
   return (
-    <div id="faq" className="bg-[#232323] my-10 px-5 py-16 rounded-lg text-white">
+    <div
+      id="faq"
+      className="bg-[#232323] my-10 px-5 py-16 rounded-lg text-white"
+    >
       <div className="text-center font-bold text-2xl">FAQ</div>
-      <div className="flex flex-col gap-5 mt-5">
+      <div className="flex flex-col gap-3 mt-5">
         {qns.map((qn, index) => (
           <div
             key={index}
             onClick={() => {
-              setSelectedQns(
-                selectedQns.includes(index)
-                  ? selectedQns.filter((selected) => selected !== index)
-                  : [...selectedQns, index]
-              );
-            }}
-            style={{
-              height: selectedQns.includes(index)
-                ? (qn.desc.length / 172 < 1
-                    ? 1
-                    : Math.floor(qn.desc.length / 172) + 30) + 120
-                : 64,
+              setSelectedQn(index);
             }}
             className={`${
-              selectedQns.includes(index) && "border"
+              selectedQn === index && "border"
             }  overflow-y-hidden flex flex-col gap-4  border-[#464646] duration-500 transition-all rounded-md p-5`}
           >
-            <div className="font-bold   cursor-pointer flex justify-between text-lg">
-              <span>{qn.title}</span>
+            <div className="font-bold pb-1 gap-3 cursor-pointer flex justify-between text-lg">
+              <span className="">{qn.title}</span>
               <div
                 className={`${
-                  selectedQns.includes(index) ? "-rotate-180" : ""
+                  selectedQn === index ? "-rotate-180" : ""
                 } duration-500`}
               >
                 <KeyboardArrowDown />
               </div>
             </div>
-            <div className="text-sm">{qn.desc}</div>
+            <div
+              className={`text-sm ${
+                selectedQn === index ? "block" : "hidden"
+              } duration-500 transition-all`}
+            >
+              {qn.desc}
+            </div>
           </div>
         ))}
       </div>

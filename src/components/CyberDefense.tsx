@@ -2,9 +2,12 @@ import React from "react";
 import { ReactComponent as People } from "../assets/people.svg";
 function CyberDefense() {
   return (
-    <div id="aboutus" className="flex md:flex-row flex-col gap-10 justify-between items-center w-full">
+    <div
+      id="aboutus"
+      className="flex md:flex-row flex-col gap-10 justify-between items-center w-full"
+    >
       <div className="flex flex-col gap-5 max-w-[29rem]">
-        <div className="text-[2rem] font-medium capitalize leading-[2.5rem]">
+        <div className="text-[2rem] text-center md:text-start font-medium capitalize leading-[2.5rem]">
           Spreading cyber defense for our clients
         </div>
         <div className="text-[#707070] leading-[1.3rem] text-[1.15rem]">
@@ -17,7 +20,7 @@ function CyberDefense() {
           cyber issues, blockchain analysis, and more.
         </div>
       </div>
-      <People className="max-w-[28rem] w-full" />
+      <People className="max-w-[28rem] sm:min-w-[20rem] w-full" />
     </div>
   );
 }

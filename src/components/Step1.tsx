@@ -47,7 +47,7 @@ function Step1() {
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     },
   ];
-const [selectedValue, setSelectedValue] = useRecoilState(validation)
+  const [selectedValue, setSelectedValue] = useRecoilState(validation);
   return (
     <div className="flex w-full flex-col gap-5">
       <div className="border-b flex flex-col gap-5 py-5 w-full">
@@ -65,7 +65,7 @@ const [selectedValue, setSelectedValue] = useRecoilState(validation)
       >
         {data.map((item, index) => (
           <label
-          key={index}
+            key={index}
             onClick={() => setSelectedValue(index)}
             className="border flex justify-between items-center p-5 rounded-xl"
           >

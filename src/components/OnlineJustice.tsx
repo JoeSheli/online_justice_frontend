@@ -51,7 +51,7 @@ function OnlineJustice() {
 
   return (
     <div className="flex flex-col my-10 gap-6 items-center">
-      <div className="text-3xl font-medium">The Power of Online Justice</div>
+      <div className="text-3xl text-center font-medium">The Power of Online Justice</div>
       <div className="text-center text-[0.9rem] max-w-[40rem] leading-6 text-[#707070]">
         Your report is shared with more than 3,000 law enforcers and enters our
         database of fraud criminals. Upon your demand, our cybersecurity experts

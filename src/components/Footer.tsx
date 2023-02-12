@@ -18,9 +18,13 @@ function Footer() {
     "Privacy  Policy",
   ];
   const others = [
-    <a target="_blank" className="flex items-center gap-3">
+    <a
+      target="_blank"
+      href="tel:+442045253282"
+      className="flex items-center gap-3"
+    >
       <Phone />
-      <span>+98 939 269 6115</span>
+      <span>+44 204 525 3282</span>
     </a>,
     <div className="flex items-center gap-3">
       <Mail />
@@ -73,6 +77,11 @@ function Footer() {
             <div className="flex flex-wrap items-center gap-6 font-medium">
               {foooters.map((foter, index) => (
                 <a
+                  target={
+                    index === 3 || index === 4 || index === 5
+                      ? "_blank"
+                      : "_top"
+                  }
                   href={
                     index === 3
                       ? "https://onlinejustice.com/blog/"

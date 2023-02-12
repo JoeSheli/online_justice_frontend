@@ -15,7 +15,7 @@ function Step({
   key: number;
 }) {
   return (
-    <div key={key} className="flex min-w-[15rem] items-center gap-5">
+    <div key={key} className="flex sm:min-w-[15rem] items-center gap-5">
       <div className="flex items-start flex-col gap-4">
         <div
           className="py-3 px-5 rounded-md"
@@ -26,7 +26,7 @@ function Step({
         <div className="font-bold text-lg">{title}</div>
         <div className="max-w-[15rem]">{desc}</div>
       </div>
-      {showNext && <ChevronRight sx={{fontSize: 35}}/>}
+      {showNext && <ChevronRight sx={{ fontSize: 35 }} className="sm:block hidden" />}
     </div>
   );
 }

@@ -40,8 +40,8 @@ function Contact() {
         </a>
         <a
           href=" https://www.benzinga.com/pressreleases/22/10/29146053/onlinejustice-brings-new-policies-to-deal-with-online-scams-and-frauds"
-        target="_blank"
-        className="absolute top-[35%] left-[30%]"
+          target="_blank"
+          className="absolute top-[35%] left-[30%]"
         >
           <Benzinga className="sm:w-[10rem] w-[8rem]" />
         </a>

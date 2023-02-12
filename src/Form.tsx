@@ -1,7 +1,7 @@
 import { ArrowBack, East } from "@mui/icons-material";
 import { Alert, Button } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useRecoilState, useRecoilValue } from "recoil";
 import Logo from "./assets/topLogo.png";
 import { finalValues, Step2Values, validation } from "./atom";
@@ -39,8 +39,11 @@ function Form() {
   }, [error]);
   const [step2Values, setStep2values] = useRecoilState(Step2Values);
   const [values, setValues] = useRecoilState(finalValues);
+  useEffect(() => {
+   document.title = "Online Justice | Form"
+  },[])
   return (
-    <div className="max-w-[90rem] mx-auto px-6 md:px-14">
+    <div className="max-w-[90rem] mx-auto px-3 sm:px-6 md:px-14">
       <ValidationGroup>
         <form
           onSubmit={(e) => {
@@ -62,7 +65,10 @@ function Form() {
               <ArrowBack />
               <div>Back</div>
             </div>
-            <img src={Logo} />
+            <Link to="/">
+            <img src={Logo} className="sm:w-auto w-[12rem]" />
+
+            </Link>
             <div></div>
           </div>
           {error.length > 0 && (
@@ -98,9 +104,10 @@ function Form() {
                 variant="contained"
                 style={{
                   background: "#DB1D60",
-                  padding: "10px 70px",
+                  // padding: "10px 70px",
                   textTransform: "capitalize",
                 }}
+                className="sm:px-[70px] px-5l sm:py-[10px]"
                 onClick={() => {
                   window.scrollTo({
                     top: 0,
@@ -156,7 +163,7 @@ function Form() {
                     if (errors.length > 0) {
                       setError([...errors]);
                     } else {
-                      navigate("/thankyou")
+                      navigate("/thankyou");
                     }
                   }
                 }}
