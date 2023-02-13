@@ -15,43 +15,58 @@ function OnlineJustice() {
     {
       icon: <Lottery />,
       title: "Lottery scams",
-      desc: "We can provide help and guidance for victims of crypto scams, Forex scams, binary options scams and more",
+      desc: "We can provide help and guidance for victims of lottery scams, prize win scams, sweepstakes cams, online gambling scams and more.",
     },
     {
       icon: <Scams />,
       title: "Romance scams",
-      desc: "We can provide help and guidance for victims of crypto scams, Forex scams, binary options scams and more",
+      desc: "We can provide help and guidance for victims of romance scams, Military romance scams, extortion, intimate blackmail and more.",
     },
     {
       icon: <Lottery />,
       title: "e-commerce scams",
-      desc: "We can provide help and guidance for victims of crypto scams, Forex scams, binary options scams and more",
+      desc: "We can provide help and guidance for victims of marketplace scams, online shopping scams and more. ",
     },
     {
       icon: <Lottery />,
       title: "Loan scams",
-      desc: "We can provide help and guidance for victims of crypto scams, Forex scams, binary options scams and more",
+      desc: `We can provide help and
+      guidance for victims of loan
+      fee scams, no credit check
+      scams, debt consolidation
+      scams and more.`,
     },
     {
       icon: <Lottery />,
       title: "Employment scams",
-      desc: "We can provide help and guidance for victims of crypto scams, Forex scams, binary options scams and more",
+      desc: `We can provide help and
+      guidance for victims of
+      online employment staff,
+      data entry job scams and
+      more.`,
     },
     {
       icon: <Lottery />,
       title: "Tax Refund scams",
-      desc: "We can provide help and guidance for victims of crypto scams, Forex scams, binary options scams and more",
+      desc: `We can provide help and
+      guidance for victims of tax
+      refund scams and more.`,
     },
     {
       icon: <Lottery />,
       title: "Inheritance scams",
-      desc: "We can provide help and guidance for victims of crypto scams, Forex scams, binary options scams and more",
+      desc: `We can provide help and
+      guidance for victims of
+      fake inheritance scams and
+      more.`,
     },
   ];
 
   return (
     <div className="flex flex-col my-10 gap-6 items-center">
-      <div className="text-3xl text-center font-medium">The Power of Online Justice</div>
+      <div className="text-3xl text-center font-medium">
+        The Power of Online Justice
+      </div>
       <div className="text-center text-[0.9rem] max-w-[40rem] leading-6 text-[#707070]">
         Your report is shared with more than 3,000 law enforcers and enters our
         database of fraud criminals. Upon your demand, our cybersecurity experts

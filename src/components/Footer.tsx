@@ -26,13 +26,13 @@ function Footer() {
       <Phone />
       <span>+44 204 525 3282</span>
     </a>,
-    <div className="flex items-center gap-3">
+    <a href="mailto:support@onlinejustice.com" className="flex items-center gap-3">
       <Mail />
-      <span>Info@email.com</span>
-    </div>,
+      <span>support@onlinejustice.com</span>
+    </a>,
     <div className="flex items-center gap-3">
       <Location />
-      <span>Lorem ipsum dolor sit amet, consectetur</span>
+      <span>167-169 Great Portland Street, 5th Floor, London.</span>
     </div>,
   ];
   return (
@@ -100,9 +100,9 @@ function Footer() {
           </div>
           <div className="flex flex-col gap-10">
             <div className="text-2xl font-semibold">Contact info</div>
-            <div className="flex flex-wrap items-center gap-5 font-medium">
+            <div className="flex xl:flex-nowrap flex-wrap items-center gap-5 font-medium">
               {others.map((foter, index) => (
-                <div key={index}>{foter}</div>
+                <div key={index} className="whitespace-nowrap">{foter}</div>
               ))}
             </div>
           </div>

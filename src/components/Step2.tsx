@@ -39,8 +39,8 @@ function Step2() {
         />
         <Ask3
           question="How did you pay or send the money?"
-          type="select"
-          data={[{ label: "Paypal", value: "pal" }]}
+          type="simple"
+          placeholder="Please specif how"
         />
       </div>
       <div className="flex sm:items-start sm:flex-nowrap flex-wrap items-end gap-5 justify-between">

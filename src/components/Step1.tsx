@@ -12,11 +12,11 @@ function Step1() {
     },
     {
       title: "Job, investment, money-making opportunity, franchise",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      // desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     },
     {
       title: "Phone, internet, TV service",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      // desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     },
     {
       title: "Health",
@@ -24,27 +24,27 @@ function Step1() {
     },
     {
       title: "Just an annoying call",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      // desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     },
     {
       title: "Online shopping",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      // desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     },
     {
       title: "Sweepstakes, prize, lottery",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      // desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     },
     {
       title: "Credit, debt, loan",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      // desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     },
     {
       title: "Auto sale, repair",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      desc: "(ex. debt collection, credit report, student loan debt relief)",
     },
     {
       title: "Something else",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      // desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     },
   ];
   const [selectedValue, setSelectedValue] = useRecoilState(validation);

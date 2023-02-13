@@ -139,8 +139,8 @@ function Ask3({
       ) : (
         <LocalizationProvider dateAdapter={AdapterDayjs}>
           <DesktopDatePicker
-            label="DD / MM / YYYY"
-            inputFormat="DD/MM/YYYY"
+            label="MM / DD / YYYY"
+            inputFormat="MM/DD/YYYY"
             value={values.date.value}
             onChange={(e) => {
               setValues({ ...values, date: { value: e, helperText: "" } });

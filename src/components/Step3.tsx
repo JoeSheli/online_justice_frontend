@@ -59,23 +59,19 @@ function Step3() {
         <Ask3
           type="simple"
           question="Phone Number"
-          placeholder="Phone Number"
+          placeholder="Phone number"
         />
-        <Ask3 type="select" question="Phone Type" />
+         <Ask3
+          type="simple"
+          question="Email address"
+          placeholder="Info@email.com"
+        />
       </div>
       <div className="text-[gray] text-[0.95rem]">
         Zip/Postal code, phone number, phone type, and email are required if you
         want to later update your report online.{" "}
       </div>
-      <div className="flex md:flex-nowrap  flex-wrap gap-5 items-center justify-between">
-        <Ask3 type="select" question="Age Range" />
-        <div></div>
-        <Ask3 type="select" question="Military Status" />
-        <div></div>
-        <Ask3 type="select" question="Military Rank" />
-        <div></div>
-        <Ask3 type="select" question="Military Branch" />
-      </div>
+  
       <Ask2 question="Are you filing on behalf of your small business or organization?" />
     </div>
   );
