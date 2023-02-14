@@ -26,19 +26,19 @@ function Footer() {
       <Phone />
       <span>+44 204 525 3282</span>
     </a>,
-    <a href="mailto:support@onlinejustice.com" className="flex items-center gap-3">
+    <a target="_blank" href="mailto:support@onlinejustice.com" className="flex items-center gap-3">
       <Mail />
       <span>support@onlinejustice.com</span>
     </a>,
     <div className="flex items-center gap-3">
-      <Location />
+      <Location className="h-10 w-10"/>
       <span>167-169 Great Portland Street, 5th Floor, London.</span>
     </div>,
   ];
   return (
     <div className="bg-[#232323] text-white">
       <div className="max-w-[90rem] px-14 py-10 flex md:flex-row flex-col gap-10 mx-auto">
-        <div className="flex border-r-2 border-[#383838] pr-10 py-6 max-w-[23rem] gap-5 flex-col">
+        <div className="flex border-b-2 sm:border-b-0 sm:border-r-2 border-[#383838] pr-10 py-6 max-w-[23rem] gap-5 flex-col">
           <Link to="/">
             <img src={Logo} />
           </Link>
@@ -102,7 +102,7 @@ function Footer() {
             <div className="text-2xl font-semibold">Contact info</div>
             <div className="flex xl:flex-nowrap flex-wrap items-center gap-5 font-medium">
               {others.map((foter, index) => (
-                <div key={index} className="whitespace-nowrap">{foter}</div>
+                <div key={index} className="sm:whitespace-nowrap">{foter}</div>
               ))}
             </div>
           </div>

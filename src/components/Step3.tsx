@@ -50,7 +50,7 @@ function Step3() {
           placeholder="State/Province/Region"
         />
       </div>
-      <div className="flex md:flex-nowrap  flex-wrap gap-5 items-center justify-between">
+      <div className="flex mb-10 md:flex-nowrap  flex-wrap gap-5 items-center justify-between">
         <Ask3
           type="simple"
           question="Zip/Postal Code"
@@ -61,18 +61,12 @@ function Step3() {
           question="Phone Number"
           placeholder="Phone number"
         />
-         <Ask3
+        <Ask3
           type="simple"
           question="Email address"
           placeholder="Info@email.com"
         />
       </div>
-      <div className="text-[gray] text-[0.95rem]">
-        Zip/Postal code, phone number, phone type, and email are required if you
-        want to later update your report online.{" "}
-      </div>
-  
-      <Ask2 question="Are you filing on behalf of your small business or organization?" />
     </div>
   );
 }

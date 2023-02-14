@@ -15,7 +15,15 @@ function Step2() {
           investigations.
         </div>
       </div>
-      <Ask2 question="Did you send the scammer payment of any kind?" />
+      <Ask2
+        setValue={(value) => {
+          setStep2Values({
+            ...step2Values,
+            sentMoneyOfAnyKind: value,
+          });
+        }}
+        question="Did you send the scammer payment of any kind?"
+      />
       <div className="flex sm:items-start sm:flex-nowrap flex-wrap items-end gap-5 justify-between">
         <Ask3
           value={step2Values.payment.value}
@@ -40,7 +48,8 @@ function Step2() {
         <Ask3
           question="How did you pay or send the money?"
           type="simple"
-          placeholder="Please specif how"
+          specify
+          placeholder="Please specify how"
         />
       </div>
       <div className="flex sm:items-start sm:flex-nowrap flex-wrap items-end gap-5 justify-between">
@@ -71,8 +80,8 @@ function Step2() {
             })
           }
           question="How did you first learn abouth the scam"
-          type="select"
-          data={[{ label: "Online", value: "online" }]}
+          type="simple"
+          placeholder="Online, offline, other..."
         />
       </div>
       <div className="font-bold mb-3 mt-10 text-3xl">

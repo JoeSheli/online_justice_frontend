@@ -56,7 +56,11 @@ function FAQ() {
           <div
             key={index}
             onClick={() => {
-              setSelectedQn(index);
+              if (selectedQn === index) {
+                setSelectedQn(null)
+              } else {
+                setSelectedQn(index);
+              }
             }}
             className={`${
               selectedQn === index && "border"

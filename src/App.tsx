@@ -20,6 +20,11 @@ function App() {
         <FAQ />
       </div>
       <Footer />
+      <div className="text-sm text-center my-5 px-5">
+        © 2022 OnlineJustice is owned and operated by Orange INF Tools LTD
+        #14186929 registered at 167-169 Great Portland Street, 5th Floor, London
+        W1W 5PF.
+      </div>
     </>
   );
 }

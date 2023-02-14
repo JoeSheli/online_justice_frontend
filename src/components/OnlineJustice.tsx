@@ -4,7 +4,14 @@ import { ReactComponent as Lottery } from "../assets/lottery.svg";
 import PowerCoursels from "../subcomponents/PowerCoursels";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
-
+import {
+  FaHeart,
+  FaShoppingCart,
+  FaLandmark,
+  FaBriefcase,
+  FaMoneyBill,
+  FaBook,
+} from "react-icons/fa";
 function OnlineJustice() {
   const experts = [
     {
@@ -18,17 +25,17 @@ function OnlineJustice() {
       desc: "We can provide help and guidance for victims of lottery scams, prize win scams, sweepstakes cams, online gambling scams and more.",
     },
     {
-      icon: <Scams />,
+      icon: <FaHeart color="white" />,
       title: "Romance scams",
       desc: "We can provide help and guidance for victims of romance scams, Military romance scams, extortion, intimate blackmail and more.",
     },
     {
-      icon: <Lottery />,
+      icon: <FaShoppingCart color="white" />,
       title: "e-commerce scams",
       desc: "We can provide help and guidance for victims of marketplace scams, online shopping scams and more. ",
     },
     {
-      icon: <Lottery />,
+      icon: <FaLandmark color="white" />,
       title: "Loan scams",
       desc: `We can provide help and
       guidance for victims of loan
@@ -37,7 +44,7 @@ function OnlineJustice() {
       scams and more.`,
     },
     {
-      icon: <Lottery />,
+      icon: <FaBriefcase color="white" />,
       title: "Employment scams",
       desc: `We can provide help and
       guidance for victims of
@@ -46,14 +53,14 @@ function OnlineJustice() {
       more.`,
     },
     {
-      icon: <Lottery />,
+      icon: <FaBook color="white"/>,
       title: "Tax Refund scams",
       desc: `We can provide help and
       guidance for victims of tax
       refund scams and more.`,
     },
     {
-      icon: <Lottery />,
+      icon: <FaMoneyBill color="white"/>,
       title: "Inheritance scams",
       desc: `We can provide help and
       guidance for victims of

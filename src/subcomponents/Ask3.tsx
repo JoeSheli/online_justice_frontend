@@ -4,6 +4,7 @@ import {
   InputAdornment,
   InputBase,
   InputLabel,
+  makeStyles,
   MenuItem,
   OutlinedInputProps,
   Select,
@@ -11,7 +12,6 @@ import {
   TextField,
   type TextFieldProps,
 } from "@mui/material";
-import { useState } from "react";
 import { DesktopDatePicker, LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { useRecoilState } from "recoil";
@@ -79,6 +79,7 @@ function Ask3({
   setValue,
   helperText: valueRef,
   setHelperText,
+  specify,
 }: {
   question?: string;
   type: string;
@@ -89,32 +90,36 @@ function Ask3({
   setValue?: React.Dispatch<React.SetStateAction<string>>;
   helperText?: any;
   setHelperText?: any;
+  specify?: boolean;
 }) {
   const [values, setValues] = useRecoilState(Step2Values);
   return (
     <div className="flex gap-3 justify-end   w-full flex-col">
       {question ? <div className="font-medium">{question}</div> : <div></div>}
       {type === "simple" ? (
-        <ReusedTextField
-          onChange={(e) => {
-            if (number) {
-              if (!/^[0-9\b]+$/.test(e.target.value)) {
-                setValue!("");
+        <div>
+          <ReusedTextField
+            onChange={(e) => {
+              if (number) {
+                if (!/^[0-9\b]+$/.test(e.target.value)) {
+                  setValue!("");
+                } else {
+                  setValue!(e.target.value);
+                }
               } else {
                 setValue!(e.target.value);
               }
-            } else {
-              setValue!(e.target.value);
-            }
-          }}
-          error={valueRef !== undefined || valueRef !== null}
-          helperText={valueRef}
-          label={placeholder}
-          variant="filled"
-          id="outlined-required"
-          className="w-full"
-          value={value}
-        />
+            }}
+            error={valueRef !== undefined || valueRef !== null}
+            helperText={valueRef}
+            label={placeholder}
+            variant="filled"
+            id="outlined-required"
+            className="w-full"
+            value={value}
+            InputLabelProps={specify ? { className: "text-gray-500 text-center right-0" } : {className: "text-gray-800"}}
+          />
+        </div>
       ) : type === "select" ? (
         <FormControl variant="standard">
           <InputLabel id="demo-customized-select-label">Select</InputLabel>

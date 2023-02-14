@@ -14,6 +14,7 @@ export const Step2Values: RecoilState<any> = atom({
     government: { value: "", helperText: "" },
     date: { value: null, helperText: "" },
     heardScam: { value: "", helperText: "" },
+    sentMoneyOfAnyKind: { value: null, helperText: "" },
   },
 });
 

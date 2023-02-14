@@ -40,8 +40,8 @@ function Form() {
   const [step2Values, setStep2values] = useRecoilState(Step2Values);
   const [values, setValues] = useRecoilState(finalValues);
   useEffect(() => {
-   document.title = "Online Justice | Form"
-  },[])
+    document.title = "Online Justice | Form";
+  }, []);
   return (
     <div className="max-w-[90rem] mx-auto px-3 sm:px-6 md:px-14">
       <ValidationGroup>
@@ -66,8 +66,7 @@ function Form() {
               <div>Back</div>
             </div>
             <Link to="/">
-            <img src={Logo} className="sm:w-auto w-[12rem]" />
-
+              <img src={Logo} className="sm:w-auto w-[12rem]" />
             </Link>
             <div></div>
           </div>
@@ -114,38 +113,22 @@ function Form() {
                     behavior: "smooth",
                   });
                   if (currentStep === 1) {
-                    if (selectedValue === null || selectedValue === undefined) {
-                      setError(["Enter your choice"]);
-                      setSecondsPassed(0);
-                      return;
-                    }
+                    // if (selectedValue === null || selectedValue === undefined) {
+                    //   setError(["Enter your choice"]);
+                    //   setSecondsPassed(0);
+                    //   return;
+                    // }
                     setCurrentStep(currentStep + 1);
                   } else if (currentStep === 2) {
                     // check if one of  step2values has helperText
                     let errors = [];
                     if (
-                      step2Values?.date?.helperText ||
-                      !step2Values?.date?.value
+                      step2Values?.sentMoneyOfAnyKind?.helperText ||
+                      step2Values?.sentMoneyOfAnyKind?.value === null
                     ) {
-                      errors.push("Enter date you gave your money ");
-                      setStep2values({
-                        ...step2Values,
-                        date: {
-                          ...step2Values.date,
-                          helperText: "Enter date you gave your money ",
-                        },
-                      });
+                      errors.push("Tell us if you sent money of any kind");
                     }
-                    if (step2Values.heardScam.value.length === 0) {
-                      errors.push("Enter how you heard about the scam ");
-                      setStep2values({
-                        ...step2Values,
-                        heardScam: {
-                          ...step2Values.heardScam,
-                          helperText: "Enter how you heard about the scam ",
-                        },
-                      });
-                    }
+
                     if (!errors.length) {
                       setCurrentStep(currentStep + 1);
                     }
