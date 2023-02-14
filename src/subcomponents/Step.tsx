@@ -15,10 +15,10 @@ function Step({
   key: number;
 }) {
   return (
-    <div key={key} className="flex sm:min-w-[15rem] gap-5">
-      <div className="flex items-start flex-col gap-4">
+    <div key={key} className="flex sm:min-w-[15rem] ">
+      <div className="flex p-7 group rounded-2xl duration-500 hover:bg-[#DB1D60] items-start flex-col gap-4">
         <div
-          className="py-3 px-5 rounded-md"
+          className="py-3 px-5 text-lg group-hover:bg-white duration-700 group-hover:text-black rounded-md"
           style={{ background: "rgba(240, 240, 240, 0.04)" }}
         >
           {number}

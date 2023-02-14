@@ -11,7 +11,7 @@ function ReportFraud() {
     >
       <div className="flex  gap-5 flex-col items-start max-w-[28rem]">
         <div className="font-[800] text-4xl sm:text-5xl flex flex-col gap-3 sm:gap-5">
-          <div>Report to help </div>
+          <div className="text-[#232323]">Report to help </div>
           <div className="text-[#DB1D60]">Fight Fraud!</div>
         </div>
         <div>
@@ -26,7 +26,7 @@ function ReportFraud() {
               padding: "10px 40px",
               textTransform: "capitalize",
             }}
-            className="flex items-center gap-4"
+            className="flex hover:bg-[#232323] items-center gap-4"
           >
             <span>Report Now</span>
             <East />

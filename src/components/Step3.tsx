@@ -34,7 +34,7 @@ function Step3() {
               lastname: { ...values.lastname, value },
             })
           }
-          helperText={values.firstname.helperText}
+          helperText={values.lastname.helperText}
           type="simple"
           placeholder="Lastname"
         />
@@ -60,11 +60,27 @@ function Step3() {
           type="simple"
           question="Phone Number"
           placeholder="Phone number"
+          value={values.phoneNumber.value}
+          setValue={(value) =>
+            setValues({
+              ...values,
+              phoneNumber: { ...values.phoneNumber, value },
+            })
+          }
+          helperText={values.phoneNumber.helperText}
         />
         <Ask3
           type="simple"
           question="Email address"
           placeholder="Info@email.com"
+          value={values.email.value}
+          setValue={(value) =>
+            setValues({
+              ...values,
+              email: { ...values.email, value },
+            })
+          }
+          helperText={values.email.helperText}
         />
       </div>
     </div>

@@ -31,7 +31,7 @@ function Footer() {
       <span>support@onlinejustice.com</span>
     </a>,
     <div className="flex items-center gap-3">
-      <Location className="h-10 w-10"/>
+      <Location className="h-6 w-6"/>
       <span>167-169 Great Portland Street, 5th Floor, London.</span>
     </div>,
   ];
@@ -51,21 +51,21 @@ function Footer() {
             <a
               target="_blank"
               href="https://www.linkedin.com/company/online-justice/"
-              className="cursor-pointer border-2 rounded-md p-3 border-[#383838]"
+              className="border-[2px] rounded-md p-3 border-[#383838]"
             >
               <LinkedIn />
             </a>
             <a
               target="_blank"
               href="https://www.instagram.com/onlinejustice4u"
-              className="cursor-pointer border-2 rounded-md p-3 border-[#383838]"
+              className="border-[2px] rounded-md p-3 border-[#383838]"
             >
               <Instagram />
             </a>
             <a
               target="_blank"
               href="https://www.facebook.com/OnlineJustice4u"
-              className="cursor-pointer border-2 rounded-md p-3 border-[#383838]"
+              className="border-[2px] rounded-md p-3 border-[#383838]"
             >
               <Facebook />
             </a>
@@ -82,6 +82,7 @@ function Footer() {
                       ? "_blank"
                       : "_top"
                   }
+                  className={`${index !== 0 && "hover:text-[#DB1D60]"}  duration-200`}
                   href={
                     index === 3
                       ? "https://onlinejustice.com/blog/"

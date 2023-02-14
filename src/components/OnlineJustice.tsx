@@ -80,7 +80,7 @@ function OnlineJustice() {
         will investigate your particular case and look into recovering a
         substantial part if not all of your lost funds.
       </div>
-      <div className="flex overflow-x-auto pb-4 w-full gap-5">
+      <div className="flex experts overflow-x-auto pb-4 w-full gap-5">
         {experts.map((expert, index) => (
           <PowerCoursels
             key={index}
@@ -96,8 +96,9 @@ function OnlineJustice() {
             textTransform: "capitalize",
             color: "#DB1D60",
             border: "1px solid #DB1D60",
-            padding: "15px 15px",
+            padding: "20px",
           }}
+          className="text-lg hover:text-white duration-500 hover:bg-[#DB1D60]"
         >
           Contact an expert
         </Button>

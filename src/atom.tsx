@@ -23,5 +23,7 @@ export const finalValues: RecoilState<any> = atom({
   default: {
     firstname: { value: "", helperText: "" },
     lastname: { value: "", helperText: "" },
+    phoneNumber: { value: "", helperText: "" },
+    email: { value: "", helperText: "" },
   },
 });

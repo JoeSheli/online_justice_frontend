@@ -102,24 +102,22 @@ function Navigation() {
         <div className="lg:flex hidden items-center gap-5">
           <Button
             href="tel:+442045253282"
-            className="w-[100px] sm:w-[120px]"
+            className="hover:text-white hover:bg-[#DB1D60] px-20 duration-500 rounded-lg py-3"
             variant="outlined"
             style={{
               textTransform: "capitalize",
               color: "#DB1D60",
               border: "1px solid #DB1D60",
-              padding: "10px",
             }}
           >
             Call us
           </Button>
           <Link to="/form">
             <Button
-              className="w-[100px] sm:w-[120px]"
+              className=" duration-500 rounded-lg py-3 px-20 hover:bg-[#232323] "
               variant="contained"
               style={{
                 background: "#DB1D60",
-                padding: "10px",
                 textTransform: "capitalize",
               }}
             >

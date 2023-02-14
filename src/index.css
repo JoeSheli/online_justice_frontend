@@ -7,3 +7,12 @@
 html {
   scroll-behavior: smooth !important;
 }
+.experts::-webkit-scrollbar {
+  background-color: rgb(207, 207, 207);
+  border-radius: 10px;
+  height: 7px;
+}
+.experts::-webkit-scrollbar-thumb {
+  background-color: #4e4e4e;
+  border-radius: 10px;
+}

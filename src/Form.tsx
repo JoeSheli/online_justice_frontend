@@ -42,6 +42,7 @@ function Form() {
   useEffect(() => {
     document.title = "Online Justice | Form";
   }, []);
+
   return (
     <div className="max-w-[90rem] mx-auto px-3 sm:px-6 md:px-14">
       <ValidationGroup>
@@ -113,11 +114,11 @@ function Form() {
                     behavior: "smooth",
                   });
                   if (currentStep === 1) {
-                    // if (selectedValue === null || selectedValue === undefined) {
-                    //   setError(["Enter your choice"]);
-                    //   setSecondsPassed(0);
-                    //   return;
-                    // }
+                    if (selectedValue === null || selectedValue === undefined) {
+                      setError(["Enter your choice"]);
+                      setSecondsPassed(0);
+                      return;
+                    }
                     setCurrentStep(currentStep + 1);
                   } else if (currentStep === 2) {
                     // check if one of  step2values has helperText
@@ -126,16 +127,26 @@ function Form() {
                       step2Values?.sentMoneyOfAnyKind?.helperText ||
                       step2Values?.sentMoneyOfAnyKind?.value === null
                     ) {
-                      errors.push("Tell us if you sent money of any kind");
+                      errors.push("Tell us if you sent payment of any kind");
                     }
-
-                    if (!errors.length) {
+                    if (error.length > 0) {
+                      setSecondsPassed(0)
+                      setError([...errors]);
+                    } else {
                       setCurrentStep(currentStep + 1);
                     }
-                    setError([...errors]);
                     // check if date has value and check if
                   } else {
                     let errors = [];
+                    if (values?.phoneNumber.value === "") {
+                      errors.push("Enter your phone number");
+                    }
+                    if (values?.email.value === "") {
+                      errors.push("Enter your Email address");
+                    }
+                    if (!errors.length) {
+                      setCurrentStep(currentStep + 1);
+                    }
                     if (values?.firstname.value.length === 0) {
                       errors.push("Enter your firstname");
                     }

@@ -21,7 +21,7 @@ function HowItWorks() {
   ];
 
   return (
-    <div className="bg-[#232323] my-16 gap-10 rounded-lg overflow-x-auto md:flex-row flex-col md:w-full mx-auto w-fit text-white px-10 py-8 flex">
+    <div className="bg-[#232323] my-16 gap-5 rounded-lg overflow-x-auto md:flex-row flex-col md:w-full mx-auto w-fit text-white px-10 py-8 flex">
       <div className="flex sm:min-w-[15rem] flex-col sm:border-r-2 sm:border-b-0  border-b-2 border-[#4b4b4b] border-solid py-8 pr-16 gap-4">
         <div className="text-2xl font-semibold max-w-[5rem] ">
           How it Works?

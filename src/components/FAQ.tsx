@@ -2,7 +2,7 @@ import { KeyboardArrowDown, KeyboardArrowUp } from "@mui/icons-material";
 import React, { useEffect, useState } from "react";
 
 function FAQ() {
-  const [selectedQn, setSelectedQn] = useState<number | null>(null);
+  const [selectedQn, setSelectedQn] = useState<number[]>([]);
   const qns = [
     {
       title: "What can I report?",
@@ -56,21 +56,21 @@ function FAQ() {
           <div
             key={index}
             onClick={() => {
-              if (selectedQn === index) {
-                setSelectedQn(null)
+              if (selectedQn.includes(index)) {
+                setSelectedQn(selectedQn.filter((i) => i !== index));
               } else {
-                setSelectedQn(index);
+                setSelectedQn([...selectedQn, index]);
               }
             }}
             className={`${
-              selectedQn === index && "border"
+              selectedQn.includes(index) && "border"
             }  overflow-y-hidden flex flex-col gap-4  border-[#464646] duration-500 transition-all rounded-md p-5`}
           >
             <div className="font-bold pb-1 gap-3 cursor-pointer flex justify-between text-lg">
               <span className="">{qn.title}</span>
               <div
                 className={`${
-                  selectedQn === index ? "-rotate-180" : ""
+                  selectedQn.includes(index) ? "-rotate-180" : ""
                 } duration-500`}
               >
                 <KeyboardArrowDown />
@@ -78,7 +78,7 @@ function FAQ() {
             </div>
             <div
               className={`text-sm ${
-                selectedQn === index ? "block" : "hidden"
+                selectedQn.includes(index) ? "block" : "hidden"
               } duration-500 transition-all`}
             >
               {qn.desc}
