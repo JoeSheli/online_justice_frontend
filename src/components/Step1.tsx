@@ -59,6 +59,7 @@ function Step1() {
         className=" flex flex-col gap-5"
         aria-labelledby="demo-customized-radios"
       >
+        
         {data.map((item, index) => (
           <label
             key={index}
