@@ -129,7 +129,7 @@ function Form() {
                     ) {
                       errors.push("Tell us if you sent payment of any kind");
                     }
-                    if (error.length > 0) {
+                    if (errors.length > 0) {
                       setSecondsPassed(0)
                       setError([...errors]);
                     } else {
