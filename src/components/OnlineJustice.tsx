@@ -48,7 +48,7 @@ function OnlineJustice() {
       title: "Employment scams",
       desc: `We can provide help and
       guidance for victims of
-      online employment scam,
+      online employment staff,
       data entry job scams and
       more.`,
     },
