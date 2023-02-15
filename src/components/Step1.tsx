@@ -22,10 +22,7 @@ function Step1() {
       title: "Health",
       desc: "(ex. weight loss, eye care, treatment)",
     },
-    {
-      title: "Just an annoying call",
-      // desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    },
+    
     {
       title: "Online shopping",
       // desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
