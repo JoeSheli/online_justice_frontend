@@ -1,8 +1,8 @@
 import React, { useRef, useState } from "react";
 import { useRecoilState } from "recoil";
-import { Step2Values } from "../atom";
-import Ask2 from "../subcomponents/Ask2";
-import Ask3, { ReusedTextField } from "../subcomponents/Ask3";
+import { Step2Values } from ".atom";
+import Ask2 from ".subcomponents/Ask2";
+import Ask3, { ReusedTextField } from ".subcomponents/Ask3";
 
 function Step2() {
   const [step2Values, setStep2Values] = useRecoilState(Step2Values);

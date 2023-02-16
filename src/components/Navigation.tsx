@@ -1,6 +1,6 @@
 import { Button, IconButton, Popover } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import Logo from "../assets/topLogo.png";
+import Logo from ".assets/topLogo.png";
 import { Link, useNavigate } from "react-router-dom";
 import { Menu } from "@mui/icons-material";
 function Navigation() {

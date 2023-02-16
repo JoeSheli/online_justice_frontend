@@ -1,5 +1,5 @@
 import React from "react";
-import { ReactComponent as People } from "../assets/people.svg";
+import { ReactComponent as People } from ".assets/people.svg";
 function CyberDefense() {
   return (
     <div

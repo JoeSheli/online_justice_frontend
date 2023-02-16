@@ -15,7 +15,7 @@ import {
 import { DesktopDatePicker, LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { useRecoilState } from "recoil";
-import { Step2Values } from "../atom";
+import { Step2Values } from ".atom";
 
 const BootstrapInput = styled(InputBase)(({ theme }) => ({
   "& .MuiFilledInput-root": {

@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Logo from "../assets/logo.png";
-import { ReactComponent as LinkedIn } from "../assets/linkedIn.svg";
-import { ReactComponent as Instagram } from "../assets/instagram.svg";
-import { ReactComponent as Facebook } from "../assets/facebook.svg";
-import { ReactComponent as Phone } from "../assets/phone.svg";
-import { ReactComponent as Mail } from "../assets/message.svg";
-import { ReactComponent as Location } from "../assets/location.svg";
+import Logo from ".assets/logo.png";
+import { ReactComponent as LinkedIn } from ".assets/linkedIn.svg";
+import { ReactComponent as Instagram } from ".assets/instagram.svg";
+import { ReactComponent as Facebook } from ".assets/facebook.svg";
+import { ReactComponent as Phone } from ".assets/phone.svg";
+import { ReactComponent as Mail } from ".assets/message.svg";
+import { ReactComponent as Location } from ".assets/location.svg";
 
 function Footer() {
   const foooters = [

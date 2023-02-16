@@ -2,7 +2,7 @@ import { KeyboardArrowDown } from "@mui/icons-material";
 import { Radio, RadioGroup } from "@mui/material";
 import React, { useState } from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
-import { validation } from "../atom";
+import { validation } from ".atom";
 
 function Step1() {
   const data = [

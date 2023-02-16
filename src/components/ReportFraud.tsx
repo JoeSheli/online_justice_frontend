@@ -1,7 +1,7 @@
 import { East } from "@mui/icons-material";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
-import { ReactComponent as Person } from "../assets/person.svg";
+import { ReactComponent as Person } from ".assets/person.svg";
 
 function ReportFraud() {
   return (

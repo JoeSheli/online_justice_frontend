@@ -1,7 +1,7 @@
 import React from "react";
-import { ReactComponent as Scams } from "../assets/scams.svg";
-import { ReactComponent as Lottery } from "../assets/lottery.svg";
-import PowerCoursels from "../subcomponents/PowerCoursels";
+import { ReactComponent as Scams } from ".assets/scams.svg";
+import { ReactComponent as Lottery } from ".assets/lottery.svg";
+import PowerCoursels from ".subcomponents/PowerCoursels";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import {

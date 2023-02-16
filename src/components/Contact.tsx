@@ -1,10 +1,10 @@
 import React from "react";
-import { ReactComponent as Brands } from "../assets/Brands.svg";
-import { ReactComponent as Yahoo } from "../assets/yahoo.svg";
-import { ReactComponent as MarketWatch } from "../assets/marketwatch.svg";
-import { ReactComponent as Benzinga } from "../assets/Benzinga.svg";
-import { ReactComponent as AP } from "../assets/Card.svg";
-import { ReactComponent as Digital } from "../assets/digital.svg";
+import { ReactComponent as Brands } from ".assets/Brands.svg";
+import { ReactComponent as Yahoo } from ".assets/yahoo.svg";
+import { ReactComponent as MarketWatch } from ".assets/marketwatch.svg";
+import { ReactComponent as Benzinga } from ".assets/Benzinga.svg";
+import { ReactComponent as AP } from ".assets/Card.svg";
+import { ReactComponent as Digital } from ".assets/digital.svg";
 function Contact() {
   return (
     <div className="flex md:flex-row flex-col-reverse  md:mt-7 mt-14 gap-8 md:gap-20  justify-between lg:pr-32 items-center">

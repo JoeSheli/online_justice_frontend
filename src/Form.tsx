@@ -3,12 +3,12 @@ import { Alert, Button } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useRecoilState, useRecoilValue } from "recoil";
-import Logo from "./assets/topLogo.png";
-import { finalValues, Step2Values, validation } from "./atom";
-import Step1 from "./components/Step1";
-import Step2 from "./components/Step2";
-import Step3 from "./components/Step3";
-import StepCounter from "./subcomponents/StepCounter";
+import Logo from "assets/topLogo.png";
+import { finalValues, Step2Values, validation } from "atom";
+import Step1 from "components/Step1";
+import Step2 from "components/Step2";
+import Step3 from "components/Step3";
+import StepCounter from "subcomponents/StepCounter";
 import Shake from "react-reveal/Shake";
 import { ValidationGroup } from "mui-validate";
 function Form() {

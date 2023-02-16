@@ -1,5 +1,5 @@
 import React from "react";
-import Step from "../subcomponents/Step";
+import Step from ".subcomponents/Step";
 
 function HowItWorks() {
   const steps = [

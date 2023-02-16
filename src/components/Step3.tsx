@@ -1,8 +1,8 @@
 import React from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
-import { finalValues } from "../atom";
-import Ask2 from "../subcomponents/Ask2";
-import Ask3 from "../subcomponents/Ask3";
+import { finalValues } from ".atom";
+import Ask2 from ".subcomponents/Ask2";
+import Ask3 from ".subcomponents/Ask3";
 
 function Step3() {
   const [values, setValues] = useRecoilState(finalValues);
